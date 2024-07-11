@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const planeImage = document.querySelector(".cloud1");
+  planeImage.style.display = "none";
+
   document
     .getElementById("search-form")
     .addEventListener("submit", function (event) {
@@ -9,7 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const date = document.getElementById("date").value;
 
       console.log(`Searching for flights from ${from} to ${to} on ${date}`);
-      clearSearchResults();
+
+      planeImage.style.display = "block";
+      planeImage.querySelector("img").style.animation = "fly 3s forwards";
+
+      clearSearch();
       const resultsContainer = document.getElementById("results");
       const flightInfo = document.createElement("div");
       flightInfo.classList.add("flight-info");
@@ -22,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       resultsContainer.appendChild(flightInfo);
     });
-  function clearSearchResults() {
+
+  function clearSearch() {
     const resultsContainer = document.getElementById("results");
     resultsContainer.innerHTML = "";
   }
