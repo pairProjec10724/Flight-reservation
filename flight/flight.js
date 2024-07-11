@@ -27,3 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     resultsContainer.innerHTML = "";
   }
 });
+
+function tiketflight() {
+
+  window.location.href = "../cartes/carts.html";
+}

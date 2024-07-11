@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    background: url(https://alittleadrift.com/wp-content/uploads/2020/05/round-the-world-tickets.jpg) no-repeat;
+    background-size: cover ;
+    background-position: center;
+ 
+ 
+}
+.h1{
+    
+}
+
+.ticket {
+    width: 600px;
+    border: 2px solid #f6efef;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.ticket-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.ticket-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-bottom: 10px;
+}
+
+.info span {
+    font-weight: bold;
+}
+
+.barcode img {
+    max-width: 150px;
+}
