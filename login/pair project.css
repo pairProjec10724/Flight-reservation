@@ -1,19 +1,17 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
- 
 }
-.home{
-  display:flex ;
+.home {
+  display: flex;
   align-items: center;
   min-height: 100vh;
-  background: url(img/f98c24e695a9c6dbc20509543eb0e55c35d01368e5b8cada182d995272a2640d.webp) no-repeat;
-  background-size: cover ;
+  background: url("../img/f98c24e695a9c6dbc20509543eb0e55c35d01368e5b8cada182d995272a2640d.webp")
+    no-repeat;
+  background-size: cover;
   background-position: center;
 }
-
-
 
 .login-container {
   max-width: 4000px;
@@ -22,18 +20,17 @@ body {
   padding: 100px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position:relative;
-    height:500px;
-    width:500px;
-    margin:50px auto;
-    background: url('http://lorempixel.com/output/people-q-c-640-480-8.jpg');
-    background-size:cover;
-    -moz-box-shadow: inset 0px 850px 500px -500px #fff;
-    -webkit-box-shadow: inset 0px 850px 500px -500px #fff;
-    -o-box-shadow: inset 0px 850px 500px -500px #fff;
-    box-shadow: inset black;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  margin: 50px auto;
+  background: url("http://lorempixel.com/output/people-q-c-640-480-8.jpg");
+  background-size: cover;
+  -moz-box-shadow: inset 0px 850px 500px -500px #fff;
+  -webkit-box-shadow: inset 0px 850px 500px -500px #fff;
+  -o-box-shadow: inset 0px 850px 500px -500px #fff;
+  box-shadow: inset black;
 }
-
 
 .login-form {
   display: flex;
