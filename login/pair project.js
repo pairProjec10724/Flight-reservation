@@ -1,3 +1,3 @@
 function performLogin() {
-  window.location.href = "flight.html";
+  window.location.href = "../login/flight.html";
 }
