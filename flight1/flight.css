@@ -1,35 +1,228 @@
+/* !body Styles */
 body {
-  background: skyblue;
+  background: url("https://i.pinimg.com/originals/4b/14/26/4b1426befae67824f02541ab9b9b6032.jpg")
+    no-repeat center center;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.light {
-  width: 10px;
-  height: 10px;
-  background: red;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+h1,
+h2,
+h5 {
+  color: #444;
+  font-weight: 700;
+}
+
+/* !Navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  max-height: 50px;
+  width: auto;
+}
+
+.navbar h1 {
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* !Search Section */
+#search {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#search h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+/* !Passenger Form */
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.input-group button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 11px;
+  text-align: center;
   border-radius: 50%;
-  bottom: 295px;
-  position: absolute;
-  z-index: 10;
-  left: 20px;
-  animation: light 800ms ease-in-out 0s infinite alternate;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
+.input-group button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.input-group input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 5px;
+}
+
+/* !Results Section */
+#results {
+  margin-top: 40px;
+}
+
+#results h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 47px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #0056b3;
+}
+
+/* !plane Animation */
 .cloud {
   position: absolute;
-  top: 0px;
+  top: 0;
   right: -500px;
   opacity: 0.8;
-  animation: cloud 10s linear 0s infinite reverse;
+  animation: cloud 20s linear infinite reverse;
   z-index: 99;
-}
-
-@keyframes light {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @keyframes cloud {
@@ -41,137 +234,56 @@ body {
   }
 }
 
-.navbar {
-  background-color: #fff;
-  color: #fff;
-  padding: 20px 0;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.navbar h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  color: black;
-}
-
-.navbar nav {
-  margin-top: 10px;
-}
-
-.navbar {
-  color: rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  padding: 5px 10px;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
-}
-
-header {
-  background-color: #343a40;
-  color: #fff;
-  padding: 20px 0;
-  margin-bottom: 30px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-main {
-  min-height: 60vh;
-}
-
-#search h2,
-#results h2 {
-  font-size: 1.8rem;
+.ticket-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
-#search-form .form-group {
+.ticket-card:hover {
+  transform: translateY(-5px);
+}
+
+.ticket-card h3 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-#search-form input[type="text"],
-#search-form input[type="date"],
-#search-form button {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.ticket-card p {
+  margin-bottom: 8px;
 }
 
-#search-form button {
+.ticket-card button.btn-book {
+  display: inline-block;
+  padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-#search-form button:hover {
+.ticket-card button.btn-book:hover {
   background-color: #0056b3;
 }
 
-#results .flight-info {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  background-color: #fff;
+#from {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
-.card {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
-  max-height: 200px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.card-title {
-  font-size: 1.2rem;
-}
-
-.card-text {
-  color: #555;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
-.navbar .logo {
-  max-height: 50px;
-  height: auto;
-  width: auto;
-  display: block;
-  margin: 0 auto;
+#to {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  font-size: 1rem;
 }
